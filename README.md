@@ -42,6 +42,7 @@ Damaged building pieces around you are repaired quietly in the background. No ef
 | Mod | What it does |
 |:---|:---|
 | **[StoreAndCraft](https://thunderstore.io/c/valheim/p/Morda/StoreAndCraft/)** | Auto-store drops, dump inventory, craft and build from nearby chests, storage displays, scarecrow |
+| **[AnyAngle](https://thunderstore.io/c/valheim/p/Morda/AnyAngle/)** | Move and rotate the build preview on every axis before placing, even into the ground |
 | **[WorkbenchesPlus](https://thunderstore.io/c/valheim/p/Morda/WorkbenchesPlus/)** | Sort and filter crafting menus: craftable first, categories, armor and weapon sets by biome tier |
 | **[Forager's Garden](https://thunderstore.io/c/valheim/p/Morda/ForagersGarden/)** | Berry bushes, wild herbs and mushrooms with the Cultivator, plus Ice, Royal Jelly and Crystal beehives |
 | **[Morda's Gearhold](https://thunderstore.io/c/valheim/p/Morda/MordasGearhold/)** | Three switchable equipment sets, shared inventory, quickslots, ammo slots, trinkets, transmog looks, armour dyes |
