@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SmoothBuildRepair
 {
-    [BepInPlugin(Guid, "SmoothBuildRepair", "1.0.0")]
+    [BepInPlugin(Guid, "SmoothBuildRepair", "1.1.0")]
     public class Plugin : BaseUnityPlugin
     {
         public const string Guid = "morda.SmoothBuildRepair";
@@ -14,6 +14,8 @@ namespace SmoothBuildRepair
         ConfigEntry<float> interval;
         ConfigEntry<int> perTick;
         ConfigEntry<bool> respectWards;
+        ConfigEntry<bool> pauseNearEnemies;
+        ConfigEntry<float> enemyRadius;
 
         float timer;
 
@@ -25,6 +27,8 @@ namespace SmoothBuildRepair
             perTick = Config.Bind("General", "PiecesPerStep", 2, new ConfigDescription(
                 "Pieces repaired per step (1-50). Keeps lag away.", new AcceptableValueRange<int>(1, 50)));
             respectWards = Config.Bind("General", "RespectWards", true, "Do not repair inside foreign wards.");
+            pauseNearEnemies = Config.Bind("General", "PauseNearEnemies", true, "Pause repairing while an enemy is close, so combat and raids stay smooth.");
+            enemyRadius = Config.Bind("General", "EnemyRadius", 40f, "Distance in meters at which an enemy pauses repairing.");
         }
 
         void Update()
@@ -36,6 +40,8 @@ namespace SmoothBuildRepair
 
             var player = Player.m_localPlayer;
             if (player == null || player.IsDead()) return;
+
+            if (pauseNearEnemies.Value && EnemyNear(player)) return;
 
             Vector3 origin = player.transform.position;
             float r2 = radius.Value * radius.Value;
@@ -60,6 +66,19 @@ namespace SmoothBuildRepair
                 if (wnt.Repair())
                     left--;
             }
+        }
+
+        bool EnemyNear(Player player)
+        {
+            float r2 = enemyRadius.Value * enemyRadius.Value;
+            Vector3 pos = player.transform.position;
+            foreach (var c in Character.GetAllCharacters())
+            {
+                if (c == null || c == player || c.IsDead() || c.IsTamed()) continue;
+                if ((c.transform.position - pos).sqrMagnitude > r2) continue;
+                if (BaseAI.IsEnemy(player, c)) return true;
+            }
+            return false;
         }
     }
 }

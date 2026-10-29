@@ -20,6 +20,7 @@ Damaged building pieces around you are repaired quietly in the background. No ef
 - No particle or sound effects when repairing
 - Free: repairing costs no materials
 - Skips pieces inside foreign wards (switch it off if you want)
+- Pauses while an enemy is within 40 m, so raids and fights never stutter (configurable)
 
 ![](https://raw.githubusercontent.com/morda0511/SmoothBuildRepair/main/thunderstore-assets/smooth-build-repair/divider-norse.png)
 
@@ -34,6 +35,8 @@ Damaged building pieces around you are repaired quietly in the background. No ef
 | **Interval** | 1 | Seconds between repair steps |
 | **PiecesPerStep** | 2 | Pieces repaired per step (1-50). Raise it slowly if you want it faster |
 | **RespectWards** | true | Do not repair inside foreign wards |
+| **PauseNearEnemies** | true | Pause repairing while an enemy is close, so fights and raids stay smooth |
+| **EnemyRadius** | 40 | Distance in meters at which an enemy pauses repairing |
 
 ![](https://raw.githubusercontent.com/morda0511/SmoothBuildRepair/main/thunderstore-assets/smooth-build-repair/divider-norse.png)
 
