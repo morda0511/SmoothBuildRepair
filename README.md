@@ -57,7 +57,9 @@ The file is `BepInEx/config/morda.SmoothBuildRepair.cfg`.
 3. Client side: no install on the server needed
 
 ![Smooth Build Repair](https://raw.githubusercontent.com/morda0511/SmoothBuildRepair/main/thunderstore-assets/smooth-build-repair/smooth-build-repair-footer.png)
+
 ## Build
 
-```n dotnet build -c Release -p:ValheimDir="C:\path\to\Valheim"
+```
+dotnet build -c Release -p:ValheimDir="C:\path\to\Valheim"
 ```
