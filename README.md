@@ -1,4 +1,4 @@
-![Smooth Build Repair - Quiet auto-repair](https://raw.githubusercontent.com/morda0511/SmoothBuildRepair/main/thunderstore-assets/smooth-build-repair/smooth-build-repair-banner.png)
+![Smooth Build Repair - Quiet auto-repair](https://raw.githubusercontent.com/morda0511/SmoothBuildRepair/main/thunderstore-assets/smooth-build-repair/smooth-build-repair-banner-v2.png)
 
 <br>
 
@@ -56,7 +56,7 @@ The file is `BepInEx/config/morda.SmoothBuildRepair.cfg`.
 2. Put `SmoothBuildRepair.dll` in `BepInEx/plugins/SmoothBuildRepair/` (or use Thunderstore / r2modman)
 3. Client side: no install on the server needed
 
-![Smooth Build Repair](https://raw.githubusercontent.com/morda0511/SmoothBuildRepair/main/thunderstore-assets/smooth-build-repair/smooth-build-repair-footer.png)
+![Smooth Build Repair](https://raw.githubusercontent.com/morda0511/SmoothBuildRepair/main/thunderstore-assets/smooth-build-repair/smooth-build-repair-footer-v2.png)
 
 ## Build
 
